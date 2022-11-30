@@ -1,24 +1,29 @@
 import { Link } from 'react-router-dom'
+import { Button, Container, Form, Info, Input, Title } from './style'
 
 export function SignIn() {
   return (
-    <div>
-      <form>
-        <h1>Sign in</h1>
+    <Container>
+      <Form>
+        <Title>Sign in</Title>
 
-        <label htmlFor="Email">Email</label>
-        <input type="email" id="Email" />
+        <label className="sr-only" htmlFor="Email">
+          Email
+        </label>
+        <Input type="email" id="Email" placeholder="Email" />
 
-        <label htmlFor="Password">Password</label>
-        <input type="password" />
+        <label className="sr-only" htmlFor="Password">
+          Password
+        </label>
+        <Input type="password" placeholder="Password" />
 
-        <button type="submit">Sign In</button>
+        <Button type="submit">Sign In</Button>
 
-        <span>
+        <Info>
           New to Netflix?
           <Link to="/sign-up">Sign up now.</Link>
-        </span>
-      </form>
-    </div>
+        </Info>
+      </Form>
+    </Container>
   )
 }
