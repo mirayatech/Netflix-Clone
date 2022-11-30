@@ -9,6 +9,7 @@
 
  
 ### Future feautures ⤵
+`Mute & Unmute Trailer` &nbsp;&nbsp;
 `Authentication`  &nbsp;&nbsp;
 `Get movies info` &nbsp;&nbsp;
 `Save to watch list` &nbsp;&nbsp;
