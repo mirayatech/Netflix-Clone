@@ -9,9 +9,11 @@
 
  
 ### Future feautures ⤵
+ 
+
 `Mute & Unmute Trailer` &nbsp;
 `Authentication`  &nbsp;
-`Get movies info` &nbsp;
+`Get movies info` &nbsp; <br> <br>
 `Save to watch list` &nbsp;
 `Stripe payment gateway` &nbsp;
 
