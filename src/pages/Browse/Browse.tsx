@@ -1,3 +1,9 @@
+import { Navbar } from '../../Components'
+
 export function Browse() {
-  return <div>Browse</div>
+  return (
+    <div>
+      <Navbar />
+    </div>
+  )
 }
