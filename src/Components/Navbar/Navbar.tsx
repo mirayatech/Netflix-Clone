@@ -1,7 +1,15 @@
 import './navbar-style.css'
 import { Link } from 'react-router-dom'
-import { Container, DesktopLogo, LeftSide, MobileLogo, Nav } from './style'
+import {
+  Container,
+  DesktopLogo,
+  LeftSide,
+  MobileLogo,
+  Nav,
+  Wrapper,
+} from './style'
 import { Avatar } from './Avatar/Avatar'
+import { Search } from './Search/Search'
 
 export function Navbar() {
   return (
@@ -21,9 +29,10 @@ export function Navbar() {
           </Link>
         </LeftSide>
 
-        <div>
+        <Wrapper>
           <Avatar />
-        </div>
+          <Search />
+        </Wrapper>
       </Nav>
     </Container>
   )

@@ -3,6 +3,7 @@ import { flexCenter } from '../../styles'
 
 export const Container = styled.div`
   width: 100%;
+  z-index: 20px;
   position: fixed;
   background-color: transparent;
 `
@@ -26,4 +27,9 @@ export const DesktopLogo = styled.img`
 `
 export const MobileLogo = styled.img`
   display: none;
+`
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
 `

@@ -4,6 +4,8 @@ import { flexCenter, theme } from '../../../styles'
 export const Wrapper = styled.div`
   ${flexCenter}
   position: relative;
+  cursor: pointer;
+  z-index: 10;
 `
 
 export const Button = styled.button`
@@ -15,7 +17,8 @@ export const Button = styled.button`
 `
 
 export const Image = styled.img`
-  width: 35px;
+  cursor: pointer;
+  width: 30px;
   border-radius: 3px;
 `
 
