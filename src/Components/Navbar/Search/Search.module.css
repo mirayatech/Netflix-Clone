@@ -1,0 +1,38 @@
+@import '../../../styles/variables';
+
+.shrinked {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.expanded {
+  display: flex;
+  margin-right: 15px;
+  position: relative;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.expanded input {
+  outline: none;
+  color: var(--white);
+  background-color: var(--body);
+  border: 1px solid var(--white);
+  padding: 8px 10px 8px 30px;
+}
+
+.expanded input::placeholder {
+  color: #ffffff31;
+}
+
+.absolute * {
+  left: 5px;
+  top: -12px;
+  position: absolute;
+  background-color: var();
+}
+
+.relative * {
+  margin-right: 10px;
+}
