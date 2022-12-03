@@ -1,4 +1,4 @@
-import { Banner, Navbar } from '../../Components'
+import { Banner, Fade, Navbar } from '../../Components'
 
 export function Browse() {
   return (

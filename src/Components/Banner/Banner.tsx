@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { InfoIcon, MutedIcon, PlayIcon, SoundIcon } from '../../utilities'
+import { Fade } from '../Fade/Fade'
 import {
   ButtonWrapper,
   InfoButton,
@@ -50,6 +51,7 @@ export function Banner() {
           {isMuted ? <MutedIcon /> : <SoundIcon />}
         </MuteButton>
       </SecondaryWrapper>
+      <Fade />
     </Container>
   )
 }
