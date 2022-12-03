@@ -28,7 +28,7 @@ export const Arrow = styled.span`
 `
 
 export const Menu = styled.div`
-  top: 45px;
+  top: 40px;
   right: 30px;
   ${flexCenter}
   width: 100px;

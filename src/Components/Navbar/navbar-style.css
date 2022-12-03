@@ -1,3 +1,13 @@
+.arrowDown {
+  transform: rotate(360deg);
+  transition: all 0.3s ease;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+
 .navLink {
   font-size: 0.9rem;
   margin: 0 10px;
@@ -9,4 +19,11 @@
 
 .navBar {
   background-color: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+  .navLink,
+  .navLink--search {
+    display: none;
+  }
 }

@@ -1,18 +1,24 @@
 import './navbar-style.css'
 import { Link } from 'react-router-dom'
 import {
+  Button,
   Container,
   DesktopLogo,
   LeftSide,
   MobileLogo,
+  MobileMenu,
+  MobileView,
   Nav,
   Wrapper,
 } from './style'
 import { Avatar } from './Avatar/Avatar'
 import { Search } from './Search/Search'
 import { useState } from 'react'
+import { ArrowDownIcon } from '../../utilities'
 
 export function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
   const changeBackground = () => {
@@ -31,7 +37,32 @@ export function Navbar() {
         <LeftSide>
           <Link to="/browse" aria-label="home">
             <DesktopLogo src="/desktop-netflix.png" alt="logo" />
-            <MobileLogo src="/desktop-netflix.png" alt="logo" />
+            <MobileView>
+              <MobileLogo src="/mobile-netflix.png" alt="logo" />
+              <Button
+                aria-label="menu"
+                onMouseEnter={() => setIsMenuOpen(true)}
+                onMouseLeave={() => setIsMenuOpen(false)}
+              >
+                Browse
+                <span>
+                  <ArrowDownIcon
+                    className={isMenuOpen ? 'arrowUp' : 'arrowDown'}
+                  />
+                </span>
+              </Button>
+
+              {isMenuOpen && (
+                <MobileMenu
+                  onMouseEnter={() => setIsMenuOpen(true)}
+                  onMouseLeave={() => setIsMenuOpen(false)}
+                >
+                  <Link to="/browse">Home</Link>
+                  <Link to="/my-list">My list</Link>
+                  <Link to="/search">Search</Link>
+                </MobileMenu>
+              )}
+            </MobileView>
           </Link>
 
           <Link to="/browse" className="navLink">
@@ -44,7 +75,9 @@ export function Navbar() {
 
         <Wrapper>
           <Avatar />
-          <Search />
+          <Link to="/search" className="navLink--search">
+            <Search />
+          </Link>
         </Wrapper>
       </Nav>
     </Container>
