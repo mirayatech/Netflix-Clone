@@ -3,15 +3,14 @@ import { flexCenter } from '../../styles'
 
 export const Container = styled.div`
   width: 100%;
-  z-index: 20px;
+  z-index: 1000;
   position: fixed;
-  background-color: transparent;
 `
 
 export const Nav = styled.nav`
   margin: auto;
   display: flex;
-  max-width: 2000px;
+  max-width: 2200px;
   padding: 10px 30px;
   align-items: center;
   justify-content: space-between;

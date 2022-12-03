@@ -10,10 +10,23 @@ import {
 } from './style'
 import { Avatar } from './Avatar/Avatar'
 import { Search } from './Search/Search'
+import { useState } from 'react'
 
 export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
+
+  const changeBackground = () => {
+    if (window.scrollY >= 50) {
+      setIsScrolled(true)
+    } else {
+      setIsScrolled(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeBackground)
+  const navBackground = isScrolled ? 'navBarFilled' : 'navBar'
   return (
-    <Container>
+    <Container className={navBackground}>
       <Nav>
         <LeftSide>
           <Link to="/browse" aria-label="home">
