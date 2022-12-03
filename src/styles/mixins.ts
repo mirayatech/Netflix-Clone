@@ -5,6 +5,10 @@ export const flexCenter = `
   align-items: center;
   justify-content: center;
 `
+export const flexItemsCenter = `
+  display: flex;
+  align-items: center; 
+`
 
 export const formLayout = `
  display: flex;
@@ -12,6 +16,33 @@ export const formLayout = `
   border-radius: 4px;
   flex-direction: column;
   justify-content: center;
+ `
+
+export const bannerButtonDesktop = `
+  ${flexCenter}
+  width: 140px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700; 
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: all .2s ease;
+
+  :hover {
+    opacity: .8;
+  }
+
+  
+ `
+
+export const bannerButtonMobile = `
+  ${flexCenter}
+  width: 95px;
+  font-size: .8rem;
+  font-weight: 600; 
+  padding: 7px 2px;
+  border-radius: 4px;
+  transition: all .2s ease;
  `
 
 export const inputLayout = `
