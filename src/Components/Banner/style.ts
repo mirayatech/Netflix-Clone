@@ -42,6 +42,7 @@ export const Overlay = styled.div`
 export const SecondaryWrapper = styled.div`
   top: 250px;
   left: 30px;
+  z-index: 30;
   width: 100%;
   margin: auto;
   display: flex;
