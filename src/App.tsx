@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { Navbar } from './Components'
 import { SignIn, SignUp, Browse } from './pages'
 
 export default function App() {
