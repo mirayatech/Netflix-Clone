@@ -9,6 +9,7 @@ import {
 import {
   AiOutlineSearch as SearchIcon,
   AiFillCaretDown as ArrowDownIcon,
+  AiOutlineInfoCircle as InfoIcon,
 } from 'react-icons/ai'
 
 import { IoPlaySharp as PlayIcon } from 'react-icons/io5'
@@ -16,6 +17,7 @@ import { IoPlaySharp as PlayIcon } from 'react-icons/io5'
 import { BsDot as DotIcon } from 'react-icons/bs'
 
 export {
+  InfoIcon,
   LikeIcon,
   PlusIcon,
   ShowMoreIcon,
