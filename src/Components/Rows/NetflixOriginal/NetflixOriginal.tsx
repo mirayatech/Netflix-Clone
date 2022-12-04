@@ -1,9 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MovieType, NETFLIX_ORIGINAL } from '../../../library'
-import { LikeIcon, PlayIcon, PlusIcon, ShowMoreIcon } from '../../../utilities'
-import { Movie, Poster, Image, Info, Slider, Container } from './style'
+import {
+  LeftArrow,
+  LikeIcon,
+  PlayIcon,
+  PlusIcon,
+  RightArrow,
+  ShowMoreIcon,
+} from '../../../utilities'
+import {
+  Movie,
+  Poster,
+  Image,
+  Info,
+  Slider,
+  Container,
+  LeftButton,
+  Buttons,
+  ThreeButtons,
+  RightButton,
+} from './style'
 
 export function NetflixOriginal() {
+  const sliderRef = useRef<HTMLDivElement>(null)
+
   const [movies, setMovies] = useState<MovieType[] | null>(null)
   const getNetflixOriginals = async () => {
     const response = await fetch(NETFLIX_ORIGINAL)
@@ -12,26 +32,40 @@ export function NetflixOriginal() {
     console.log(data.results)
   }
 
+  const slideLeft = () => {
+    if (sliderRef.current) {
+      const slider = sliderRef.current
+      slider.scrollLeft = slider.scrollLeft - 150
+    }
+  }
+  const slideRight = () => {
+    if (sliderRef.current) {
+      const slider = sliderRef.current
+      slider.scrollLeft = slider.scrollLeft + 150
+    }
+  }
+
   useEffect(() => {
     getNetflixOriginals()
   }, [])
 
   return (
     <Container>
-      {/* <h1>Only on Netflix</h1> */}
-      <button>left</button>
-      <Slider>
+      <LeftButton onClick={slideLeft}>
+        <LeftArrow />
+      </LeftButton>
+      <Slider ref={sliderRef}>
         {movies?.map((movie) => (
           <Movie key={movie.id}>
-            <Poster>
+            <Poster className="poster">
               <Image
                 src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
                 alt="movie"
               />
             </Poster>
-            <Info>
-              <div>
-                <div>
+            <Info className="info">
+              <Buttons>
+                <ThreeButtons>
                   <button>
                     <PlayIcon />
                   </button>
@@ -41,19 +75,21 @@ export function NetflixOriginal() {
                   <button>
                     <LikeIcon />
                   </button>
-                </div>
+                </ThreeButtons>
                 <button>
                   <ShowMoreIcon />
                 </button>
-              </div>
-              <h1> {movie.original_name}</h1>
+              </Buttons>
+
               <span>{movie.vote_average * 10}&#37; Match</span>
             </Info>
           </Movie>
         ))}
       </Slider>
 
-      <button>Right</button>
+      <RightButton onClick={slideRight}>
+        <RightArrow />
+      </RightButton>
     </Container>
   )
 }

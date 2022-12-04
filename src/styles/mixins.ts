@@ -67,10 +67,9 @@ export const infoButton = `
     border-radius: 50%;
 
     color: ${theme.White};
-    border: 2px solid #8e8e8e;
-    background-color: transparent;
+    border: 2px solid #8e8e8e; 
     ${flexCenter} font-size: 1.2rem;
 
     :hover {
-      opacity: 0.8;
+      opacity: 0.9;
     }`

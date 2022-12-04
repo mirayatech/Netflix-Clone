@@ -106,6 +106,7 @@ export const Buttons = styled.div`
 
   button {
     ${infoButton}
+    background-color: transparent;
   }
 `
 
@@ -115,11 +116,11 @@ export const ThreeButtons = styled.div`
 
   button {
     ${infoButton}
+    background-color: transparent;
   }
 
   button:first-child {
     color: ${theme.Black};
-    border: 2px solid ${theme.White};
     background-color: ${theme.White};
   }
 `
