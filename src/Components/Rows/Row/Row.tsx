@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MovieType } from '../../../library'
 import {
   LeftArrow,
@@ -27,12 +27,27 @@ type RowProps = {
   name: string
 }
 export function Row({ URL, name }: RowProps) {
+  const sliderRef = useRef<HTMLDivElement>(null)
+
   const [movies, setMovies] = useState<MovieType[] | null>(null)
   const getMovies = async () => {
     const response = await fetch(URL)
     const data = await response.json()
     setMovies(data.results)
     console.log(data.results)
+  }
+
+  const slideLeft = () => {
+    if (sliderRef.current) {
+      const slider = sliderRef.current
+      slider.scrollLeft = slider.scrollLeft - 150
+    }
+  }
+  const slideRight = () => {
+    if (sliderRef.current) {
+      const slider = sliderRef.current
+      slider.scrollLeft = slider.scrollLeft + 150
+    }
   }
 
   useEffect(() => {
@@ -42,10 +57,10 @@ export function Row({ URL, name }: RowProps) {
   return (
     <Container>
       <Caption>{name}</Caption>
-      <LeftButton>
+      <LeftButton onClick={slideLeft}>
         <LeftArrow />
       </LeftButton>
-      <Slider>
+      <Slider ref={sliderRef}>
         {movies?.map((movie) => (
           <Movie key={movie.id}>
             <Poster className="poster">
@@ -78,7 +93,7 @@ export function Row({ URL, name }: RowProps) {
         ))}
       </Slider>
 
-      <RightButton>
+      <RightButton onClick={slideRight}>
         <RightArrow />
       </RightButton>
     </Container>
