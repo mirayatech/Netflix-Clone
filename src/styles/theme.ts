@@ -8,5 +8,5 @@ export const theme = {
   TransparentGrey: ' #7777',
   TransparentBlack: '#000000bf',
   Red: ' #e50a13',
-  Green: ' #38a353',
+  Green: '#28db55',
 }
