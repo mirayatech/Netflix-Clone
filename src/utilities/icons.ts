@@ -14,9 +14,15 @@ import {
 
 import { IoPlaySharp as PlayIcon } from 'react-icons/io5'
 
-import { BsDot as DotIcon } from 'react-icons/bs'
+import {
+  BsDot as DotIcon,
+  BsChevronLeft as LeftArrow,
+  BsChevronRight as RightArrow,
+} from 'react-icons/bs'
 
 export {
+  LeftArrow,
+  RightArrow,
   InfoIcon,
   LikeIcon,
   PlusIcon,
