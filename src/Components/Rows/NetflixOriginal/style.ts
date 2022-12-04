@@ -51,8 +51,8 @@ export const Movie = styled.div`
   }
 
   @media screen and (max-width: 1000px) {
-    width: 15rem;
-    height: 7rem;
+    width: 12rem;
+    height: 18rem;
   }
 `
 export const Poster = styled.div`
