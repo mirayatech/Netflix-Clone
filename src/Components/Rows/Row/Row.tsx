@@ -1,9 +1,26 @@
 import { useEffect, useState } from 'react'
 import { MovieType } from '../../../library'
-import { LikeIcon, PlayIcon, PlusIcon, ShowMoreIcon } from '../../../utilities'
-import { Container, Info, Movie, Poster, Slider, Image, Caption } from './style'
-
-import './row-style.css'
+import {
+  LeftArrow,
+  LikeIcon,
+  PlayIcon,
+  PlusIcon,
+  RightArrow,
+  ShowMoreIcon,
+} from '../../../utilities'
+import {
+  Container,
+  Info,
+  Movie,
+  Poster,
+  Slider,
+  Image,
+  Caption,
+  ThreeButtons,
+  Buttons,
+  LeftButton,
+  RightButton,
+} from './style'
 
 type RowProps = {
   URL: string
@@ -25,19 +42,21 @@ export function Row({ URL, name }: RowProps) {
   return (
     <Container>
       <Caption>{name}</Caption>
-      <button>left</button>
+      <LeftButton>
+        <LeftArrow />
+      </LeftButton>
       <Slider>
         {movies?.map((movie) => (
           <Movie key={movie.id}>
-            <Poster>
+            <Poster className="poster">
               <Image
                 src={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                 alt="movie"
               />
             </Poster>
-            <Info>
-              <div>
-                <div>
+            <Info className="info">
+              <Buttons>
+                <ThreeButtons>
                   <button>
                     <PlayIcon />
                   </button>
@@ -47,19 +66,21 @@ export function Row({ URL, name }: RowProps) {
                   <button>
                     <LikeIcon />
                   </button>
-                </div>
+                </ThreeButtons>
                 <button>
                   <ShowMoreIcon />
                 </button>
-              </div>
-              <h1> {movie.original_name}</h1>
+              </Buttons>
+
               <span>{movie.vote_average * 10}&#37; Match</span>
             </Info>
           </Movie>
         ))}
       </Slider>
 
-      <button>Right</button>
+      <RightButton>
+        <RightArrow />
+      </RightButton>
     </Container>
   )
 }
