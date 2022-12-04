@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { theme } from '../../styles'
 
 export const Gardient = styled.div`
-  z-index: 20;
-  height: 10rem;
+  bottom: 0;
   width: 100%;
-  margin-top: -160px;
+  height: 10rem;
+  position: absolute;
 
   background-image: linear-gradient(
     180deg,

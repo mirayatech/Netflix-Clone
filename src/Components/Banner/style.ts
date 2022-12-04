@@ -9,6 +9,7 @@ import {
 export const Container = styled.div`
   margin: auto;
   display: flex;
+  position: relative;
   justify-content: center;
   flex-direction: column;
 `
