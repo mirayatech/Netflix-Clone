@@ -15,6 +15,10 @@ export const Caption = styled.h1`
   font-weight: 500;
   font-size: 1.5rem;
   color: ${theme.White};
+
+  @media screen and (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
 `
 export const Slider = styled.div`
   display: flex;
@@ -59,6 +63,11 @@ export const Movie = styled.div`
     height: 85%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 15rem;
+    height: 7rem;
   }
 `
 export const Poster = styled.div`
