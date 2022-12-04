@@ -117,7 +117,7 @@ export const ThreeButtons = styled.div`
 
 export const LeftButton = styled.button`
   left: 0;
-  top: 40%;
+  top: 35%;
   opacity: 0;
   z-index: 10;
   ${flexCenter}
@@ -131,7 +131,7 @@ export const LeftButton = styled.button`
 
 export const RightButton = styled.button`
   right: 0;
-  top: 40%;
+  top: 35%;
   opacity: 0;
   z-index: 10;
   ${flexCenter}
