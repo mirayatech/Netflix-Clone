@@ -17,7 +17,10 @@ export function SignIn() {
         </label>
         <Input type="password" placeholder="Password" />
 
-        <Button type="submit">Sign In</Button>
+        <Link to="/browse">
+          {' '}
+          <Button type="submit">Sign In</Button>
+        </Link>
 
         <Info>
           New to Netflix?
