@@ -31,7 +31,14 @@ export function SignUp() {
         id: firebaseAuth.currentUser?.uid,
       })
 
-      toast.success('Successfully created an account.')
+      toast('Successfully created an account.', {
+        icon: '🎉',
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
+      })
       navigate(`/browse`)
     } catch (error) {
       const firebaseError = error as FirebaseError
