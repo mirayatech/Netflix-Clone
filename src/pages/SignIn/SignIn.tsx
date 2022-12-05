@@ -23,7 +23,7 @@ export function SignIn() {
           color: '#fff',
         },
       })
-      navigate('/')
+      navigate('/browse')
     } catch (error) {
       toast('Something went wrong, either email or password is incorrect.', {
         icon: '❌',
