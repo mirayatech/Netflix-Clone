@@ -62,37 +62,40 @@ export function Row({ URL, name }: RowProps) {
       </LeftButton>
       <Slider ref={sliderRef}>
         {movies?.map((movie) => (
-          <Movie key={movie.id}>
-            <Poster className="poster">
-              {' '}
-              <Link to={`/browse/${movie.id}`} className="posterWrapper">
+          <Link
+            to={`/browse/${movie.id}`}
+            className="posterWrapper"
+            key={movie.id}
+          >
+            <Movie>
+              <Poster className="poster">
                 <Image
                   src={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                   alt="movie"
-                />{' '}
-              </Link>
-            </Poster>
-            <Info className="info">
-              <Buttons>
-                <ThreeButtons>
-                  <button>
-                    <PlayIcon />
-                  </button>
-                  <button>
-                    <PlusIcon />
-                  </button>
-                  <button>
-                    <LikeIcon />
-                  </button>
-                </ThreeButtons>
-                <Link to={`/browse/${movie.id}`} className="showMoreButton">
-                  <ShowMoreIcon />
-                </Link>
-              </Buttons>
+                />
+              </Poster>
+              <Info className="info">
+                <Buttons>
+                  <ThreeButtons>
+                    <button>
+                      <PlayIcon />
+                    </button>
+                    <button>
+                      <PlusIcon />
+                    </button>
+                    <button>
+                      <LikeIcon />
+                    </button>
+                  </ThreeButtons>
+                  <Link to={`/browse/${movie.id}`} className="showMoreButton">
+                    <ShowMoreIcon />
+                  </Link>
+                </Buttons>
 
-              <span>{movie.vote_average * 10}&#37; Match</span>
-            </Info>
-          </Movie>
+                <span>{movie.vote_average * 10}&#37; Match</span>
+              </Info>
+            </Movie>
+          </Link>
         ))}
       </Slider>
 

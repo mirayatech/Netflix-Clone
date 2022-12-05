@@ -1,5 +1,13 @@
 import styled from 'styled-components'
-import { bannerButtonDesktop, flexCenter, theme } from '../../styles'
+import { flexCenter, theme } from '../../styles'
+
+export const Error = styled.div`
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 export const Container = styled.div`
   height: 100vh;
@@ -77,7 +85,8 @@ export const Actions = styled.div`
 export const Buttons = styled.div`
   display: flex;
 
-  button {
+  button,
+  a {
     ${flexCenter}
     margin-right: 10px;
     border-radius: 50%;

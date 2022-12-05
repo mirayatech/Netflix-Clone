@@ -56,36 +56,36 @@ export function NetflixOriginal() {
       </LeftButton>
       <Slider ref={sliderRef}>
         {movies?.map((movie) => (
-          <Movie key={movie.id}>
-            <Link to={`/browse/${movie.id}`}>
+          <Link to={`/browse/${movie.id}`} key={movie.id}>
+            <Movie>
               <Poster className="poster">
                 <Image
                   src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
                   alt="movie"
                 />
               </Poster>
-            </Link>
-            <Info className="info">
-              <Buttons>
-                <ThreeButtons>
-                  <button>
-                    <PlayIcon />
-                  </button>
-                  <button>
-                    <PlusIcon />
-                  </button>
-                  <button>
-                    <LikeIcon />
-                  </button>
-                </ThreeButtons>
-                <Link to={`/browse/${movie.id}`} className="showMoreButton">
-                  <ShowMoreIcon />
-                </Link>
-              </Buttons>
+              <Info className="info">
+                <Buttons>
+                  <ThreeButtons>
+                    <button>
+                      <PlayIcon />
+                    </button>
+                    <button>
+                      <PlusIcon />
+                    </button>
+                    <button>
+                      <LikeIcon />
+                    </button>
+                  </ThreeButtons>
+                  <Link to={`/browse/${movie.id}`} className="showMoreButton">
+                    <ShowMoreIcon />
+                  </Link>
+                </Buttons>
 
-              <span>{movie.vote_average * 10}&#37; Match</span>
-            </Info>
-          </Movie>
+                <span>{movie.vote_average * 10}&#37; Match</span>
+              </Info>
+            </Movie>
+          </Link>
         ))}
       </Slider>
 
