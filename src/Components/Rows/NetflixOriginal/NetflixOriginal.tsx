@@ -30,7 +30,6 @@ export function NetflixOriginal() {
     const response = await fetch(NETFLIX_ORIGINAL)
     const data = await response.json()
     setMovies(data.results)
-    console.log(data.results)
   }
 
   const slideLeft = () => {

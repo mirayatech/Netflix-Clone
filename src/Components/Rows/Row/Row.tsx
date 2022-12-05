@@ -35,7 +35,6 @@ export function Row({ URL, name }: RowProps) {
     const response = await fetch(URL)
     const data = await response.json()
     setMovies(data.results)
-    console.log(data.results)
   }
 
   const slideLeft = () => {
