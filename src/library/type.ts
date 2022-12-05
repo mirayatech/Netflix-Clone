@@ -3,10 +3,11 @@ export type MovieType = {
   backdrop_path: string
   genre_ids: []
   id: number
-  original_name: string
+  original_title: string
   overview: string
   vote_average: number
   release_date: string
+  status: string
 }
 
 export type UserType = {
