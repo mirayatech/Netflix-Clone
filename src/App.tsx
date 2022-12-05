@@ -1,5 +1,6 @@
 import { Toaster } from 'react-hot-toast'
 import { Route, Routes } from 'react-router-dom'
+import { PrivateRoute } from './Components'
 import { AuthContextProvider } from './Context'
 import { SignIn, SignUp, Browse } from './pages'
 
@@ -10,7 +11,15 @@ export default function App() {
       <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/browse" element={<Browse />} />
+
+        <Route
+          path="/browse"
+          element={
+            <PrivateRoute>
+              <Browse />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </AuthContextProvider>
   )
