@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom'
-import { Navbar } from './Components'
+import { AuthContextProvider } from './Context'
 import { SignIn, SignUp, Browse } from './pages'
 
 export default function App() {
   return (
-    <div>
+    <AuthContextProvider>
       <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/browse" element={<Browse />} />
       </Routes>
-    </div>
+    </AuthContextProvider>
   )
 }
