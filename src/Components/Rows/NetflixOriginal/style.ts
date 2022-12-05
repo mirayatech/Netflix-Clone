@@ -86,7 +86,7 @@ export const Buttons = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  button {
+  .showMoreButton {
     ${infoButton}
     background-color: ${theme.TransparentBlack};
   }
@@ -98,6 +98,7 @@ export const ThreeButtons = styled.div`
 
   button {
     ${infoButton}
+    background-color: ${theme.TransparentBlack};
   }
 
   button:first-child {

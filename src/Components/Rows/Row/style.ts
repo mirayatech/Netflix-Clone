@@ -39,7 +39,6 @@ export const Movie = styled.div`
   height: 10rem;
   display: flex;
   flex-shrink: 0;
-  cursor: pointer;
   margin-right: 8px;
   border-radius: 0.28rem;
   flex-direction: column;
@@ -81,6 +80,7 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
+  cursor: pointer;
 `
 
 export const Info = styled.div`
@@ -104,7 +104,7 @@ export const Buttons = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  button {
+  .showMoreButton {
     ${infoButton}
     background-color: transparent;
   }

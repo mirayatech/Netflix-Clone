@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MovieType } from '../../../library'
 import {
   LeftArrow,
@@ -64,10 +65,13 @@ export function Row({ URL, name }: RowProps) {
         {movies?.map((movie) => (
           <Movie key={movie.id}>
             <Poster className="poster">
-              <Image
-                src={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
-                alt="movie"
-              />
+              {' '}
+              <Link to={`/browse/${movie.id}`} className="posterWrapper">
+                <Image
+                  src={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
+                  alt="movie"
+                />{' '}
+              </Link>
             </Poster>
             <Info className="info">
               <Buttons>
@@ -82,9 +86,9 @@ export function Row({ URL, name }: RowProps) {
                     <LikeIcon />
                   </button>
                 </ThreeButtons>
-                <button>
+                <Link to={`/browse/${movie.id}`} className="showMoreButton">
                   <ShowMoreIcon />
-                </button>
+                </Link>
               </Buttons>
 
               <span>{movie.vote_average * 10}&#37; Match</span>
