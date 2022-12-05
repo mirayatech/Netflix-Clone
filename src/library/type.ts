@@ -8,3 +8,10 @@ export type MovieType = {
   vote_average: number
   release_date: string
 }
+
+export type UserType = {
+  name: string
+  email: string
+  password: string
+  id: string
+}
