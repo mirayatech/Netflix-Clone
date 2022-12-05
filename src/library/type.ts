@@ -16,3 +16,8 @@ export type UserType = {
   password: string
   id: string
 }
+
+export type MovieVideoType = {
+  id: string
+  key: string
+}
