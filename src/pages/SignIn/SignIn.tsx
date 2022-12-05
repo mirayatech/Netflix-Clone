@@ -4,6 +4,7 @@ import { Button, Container, Form, Info, Input, Title } from './style'
 import toast from 'react-hot-toast'
 import { firebaseAuth } from '../../library'
 import { useState } from 'react'
+import { theme } from '../../styles'
 
 export function SignIn() {
   const navigate = useNavigate()
@@ -15,12 +16,12 @@ export function SignIn() {
 
     try {
       await signInWithEmailAndPassword(firebaseAuth, email, password)
-      toast('Successfully logged in.', {
+      toast('Successfully signed in.', {
         icon: '✅',
         style: {
           borderRadius: '10px',
-          background: '#333',
-          color: '#fff',
+          background: theme.Body,
+          color: theme.White,
         },
       })
       navigate('/browse')
@@ -28,10 +29,9 @@ export function SignIn() {
       toast('Something went wrong, either email or password is incorrect.', {
         icon: '❌',
         style: {
-          width: '300px',
           borderRadius: '10px',
-          background: '#333',
-          color: '#fff',
+          background: theme.Body,
+          color: theme.White,
         },
       })
     }

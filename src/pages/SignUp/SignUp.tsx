@@ -7,6 +7,7 @@ import { firebaseAuth, firebaseDb, UserType } from '../../library'
 import { FirebaseError } from 'firebase/app'
 import toast from 'react-hot-toast'
 import { useState } from 'react'
+import { theme } from '../../styles'
 
 export function SignUp() {
   const [name, setName] = useState('')
@@ -35,8 +36,8 @@ export function SignUp() {
         icon: '🎉',
         style: {
           borderRadius: '10px',
-          background: '#333',
-          color: '#fff',
+          background: theme.Body,
+          color: theme.White,
         },
       })
       navigate(`/browse`)
@@ -52,8 +53,8 @@ export function SignUp() {
           icon: '❌',
           style: {
             borderRadius: '10px',
-            background: '#333',
-            color: '#fff',
+            background: theme.Body,
+            color: theme.White,
           },
         })
       }
@@ -63,8 +64,8 @@ export function SignUp() {
           icon: '❌',
           style: {
             borderRadius: '10px',
-            background: '#333',
-            color: '#fff',
+            background: theme.Body,
+            color: theme.White,
           },
         })
       }
