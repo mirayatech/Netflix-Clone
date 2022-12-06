@@ -62,40 +62,42 @@ export function Row({ URL, name }: RowProps) {
       </LeftButton>
       <Slider ref={sliderRef}>
         {movies?.map((movie) => (
-          <Link
-            to={`/browse/${movie.id}`}
-            className="posterWrapper"
-            key={movie.id}
-          >
-            <Movie>
-              <Poster className="poster">
+          <Movie>
+            <Poster className="poster">
+              {' '}
+              <Link
+                to={`/browse/${movie.id}`}
+                className="posterWrapper"
+                key={movie.id}
+              >
                 <Image
                   src={`https://image.tmdb.org/t/p/w500${movie?.backdrop_path}`}
                   alt="movie"
                 />
-              </Poster>
-              <Info className="info">
-                <Buttons>
-                  <ThreeButtons>
-                    <button>
-                      <PlayIcon />
-                    </button>
-                    <button>
-                      <PlusIcon />
-                    </button>
-                    <button>
-                      <LikeIcon />
-                    </button>
-                  </ThreeButtons>
-                  <Link to={`/browse/${movie.id}`} className="showMoreButton">
-                    <ShowMoreIcon />
-                  </Link>
-                </Buttons>
+              </Link>
+            </Poster>
 
-                <span>{movie.vote_average * 10}&#37; Match</span>
-              </Info>
-            </Movie>
-          </Link>
+            <Info className="info">
+              <Buttons>
+                <ThreeButtons>
+                  <Link to={`/browse/${movie.id}`} className="showMoreButton">
+                    <PlayIcon />
+                  </Link>
+                  <Link to={`/browse/${movie.id}`} className="showMoreButton">
+                    <PlusIcon />
+                  </Link>
+                  <Link to={`/browse/${movie.id}`} className="showMoreButton">
+                    <LikeIcon />
+                  </Link>
+                </ThreeButtons>
+                <Link to={`/browse/${movie.id}`} className="showMoreButton">
+                  <ShowMoreIcon />
+                </Link>
+              </Buttons>
+
+              <span>{movie.vote_average * 10}&#37; Match</span>
+            </Info>
+          </Movie>
         ))}
       </Slider>
 

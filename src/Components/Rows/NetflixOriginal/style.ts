@@ -96,14 +96,14 @@ export const ThreeButtons = styled.div`
   padding: 5px 0;
   display: flex;
 
-  button {
+  a {
     ${infoButton}
     background-color: ${theme.TransparentBlack};
   }
 
-  button:first-child {
+  a:first-child {
     color: ${theme.Black};
-    border: 2px solid ${theme.White};
+    border: 1px solid ${theme.White};
     background-color: ${theme.White};
   }
 `

@@ -67,15 +67,15 @@ export function NetflixOriginal() {
               <Info className="info">
                 <Buttons>
                   <ThreeButtons>
-                    <button>
+                    <Link to={`/browse/${movie.id}`} className="showMoreButton">
                       <PlayIcon />
-                    </button>
-                    <button>
+                    </Link>
+                    <Link to={`/browse/${movie.id}`} className="showMoreButton">
                       <PlusIcon />
-                    </button>
-                    <button>
+                    </Link>
+                    <Link to={`/browse/${movie.id}`} className="showMoreButton">
                       <LikeIcon />
-                    </button>
+                    </Link>
                   </ThreeButtons>
                   <Link to={`/browse/${movie.id}`} className="showMoreButton">
                     <ShowMoreIcon />
