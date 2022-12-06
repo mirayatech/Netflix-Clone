@@ -62,7 +62,7 @@ export function Row({ URL, name }: RowProps) {
       </LeftButton>
       <Slider ref={sliderRef}>
         {movies?.map((movie) => (
-          <Movie>
+          <Movie key={movie.id}>
             <Poster className="poster">
               {' '}
               <Link
