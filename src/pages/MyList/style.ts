@@ -76,6 +76,7 @@ export const Poster = styled.div`
   transition: all 0.3s ease;
 
   img {
+    border-radius: 4px;
     width: 100%;
     height: 100%;
     object-fit: cover;
