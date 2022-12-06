@@ -1,7 +1,11 @@
+import { doc, setDoc } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
+import toast from 'react-hot-toast'
 import { Link, useParams } from 'react-router-dom'
 import { Navbar } from '../../Components'
-import { MovieType, MovieVideoType } from '../../library'
+import { useAuthContext } from '../../Context'
+import { firebaseDb, MovieType, MovieVideoType } from '../../library'
+import { theme } from '../../styles'
 import { LikeIcon, PlayIcon, PlusIcon } from '../../utilities'
 import {
   Error,
@@ -20,6 +24,8 @@ export function Movie() {
   const { id } = useParams()
   const [movie, setMovie] = useState<MovieType>()
   const [movieVideo, setMovieVideo] = useState<MovieVideoType[]>()
+
+  const { user } = useAuthContext()
 
   const getMovie = async () => {
     const response =
@@ -47,12 +53,32 @@ export function Movie() {
     getVideo()
   }, [])
 
+  const saveMovieToMyList = async () => {
+    const favoritesCollectionReference = doc(
+      firebaseDb,
+      `users/${user?.uid}/myList/${movie?.id} `
+    )
+
+    await setDoc(favoritesCollectionReference, {
+      id: movie?.id,
+      title: movie?.original_title,
+      poster: movie?.poster_path,
+    })
+    toast('Added to My List', {
+      icon: '🥳',
+      style: {
+        borderRadius: '10px',
+        background: theme.CardColor,
+        color: '#fff',
+      },
+    })
+  }
   return (
     <div>
       <Navbar />
 
       {movie ? (
-        <Container style={{ color: '#fff', paddingTop: '100px' }}>
+        <Container>
           <Poster>
             <Image
               src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
@@ -80,7 +106,7 @@ export function Movie() {
                 </a>
               ))}
 
-              <button>
+              <button onClick={saveMovieToMyList}>
                 <PlusIcon />
               </button>
               <button>

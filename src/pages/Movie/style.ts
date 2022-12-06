@@ -105,6 +105,10 @@ export const Buttons = styled.div`
       opacity: 0.8;
     }
   }
+
+  button:last-child {
+    cursor: not-allowed;
+  }
 `
 
 export const Title = styled.h1`
