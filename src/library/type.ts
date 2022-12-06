@@ -21,3 +21,9 @@ export type MovieVideoType = {
   id: string
   key: string
 }
+
+export type MyListType = {
+  id: number
+  poster: string
+  title: string
+}
