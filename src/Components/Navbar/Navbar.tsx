@@ -59,7 +59,6 @@ export function Navbar() {
                 >
                   <Link to="/browse">Home</Link>
                   <Link to="/my-list">My list</Link>
-                  <Link to="/search">Search</Link>
                 </MobileMenu>
               )}
             </MobileView>
@@ -75,9 +74,7 @@ export function Navbar() {
 
         <Wrapper>
           <Avatar />
-          <Link to="/search" className="navLink--search">
-            <Search />
-          </Link>
+          <Search />
         </Wrapper>
       </Nav>
     </Container>
