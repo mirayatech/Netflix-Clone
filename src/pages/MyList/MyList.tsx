@@ -7,8 +7,6 @@ import {
   onSnapshot,
 } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
-import toast from 'react-hot-toast'
-import { FiTrash2 } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import { Navbar } from '../../Components'
 import { useAuthContext } from '../../Context'
@@ -72,11 +70,8 @@ export function MyList() {
                   src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
                   alt=""
                 />
-                <button>
-                  <FiTrash2 />
-                </button>
               </Poster>
-              <Link to={`/animes/${movie.id}`}>
+              <Link to={`/browse/${movie.id}`}>
                 <h3>{movie.title}</h3>
               </Link>
             </div>
