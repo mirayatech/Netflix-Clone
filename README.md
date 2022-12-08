@@ -1,5 +1,6 @@
 ### Netflix Clone V2 ⬇️
-A Netflix clone, built with React, TypeScript, Firebase and Styled-Components.
+A Netflix clone, built with React, TypeScript, Firebase and Styled-Components. <br>
+#### Live: https://netflix-miraya.vercel.app/  
 
 
 
