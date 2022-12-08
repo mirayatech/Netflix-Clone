@@ -1,21 +1,56 @@
+### Netflix Clone V2 ⬇️
+A Netflix clone, built with React, TypeScript, Firebase and Styled-Components.
+
+
+
+### Features 🎉
+
+- Mute & Unmute Trailer
+- Authentication
+- Get movies info 
+- Save to watch list
+
+
+### Dependencies 🛠️
+
+* `Firebase`
+* `React.js`
+* `TypeScript`
+* `Styled Components`
+* `TMDB Movie API`
+* `Build tool: Vite`
+
+
+<details>
+<summary><h3> 🎥 - Demo Video </h3></summary>
+<video src="https://user-images.githubusercontent.com/71933266/206354982-e53f92de-6462-44f1-ab51-4e51c9816581.mp4" controls="controls" >
+</video>
+</details>
+
+ <details>
+<summary><h3> 📸 - Demo Images </h3></summary>
+
  
-<div align="center"> 
+![netflix1](https://user-images.githubusercontent.com/71933266/206354412-b53ec961-117f-4c4d-9509-a63d9d597067.png)
 
-### More coming soon... 
+#
+![netflix2](https://user-images.githubusercontent.com/71933266/206354420-ad7c4b82-4815-423e-b8d6-5fa7791acd80.png)
 
-![](https://pa1.narvii.com/8243/bba05248ec24f27a4f8c58a7d5c11b30f1696e3dr1-640-358_hq.gif)
+ 
+#
+
+ ![netflix3](https://user-images.githubusercontent.com/71933266/206354434-51944382-4d2d-4405-817c-314297da7a1b.png)
 
 #
 
- 
-### Future feautures ⤵
+ ![netflix4](https://user-images.githubusercontent.com/71933266/206354455-3c628617-0dab-41f5-8383-89ad3f5c9801.png)
+
  
 
-`Mute & Unmute Trailer` &nbsp;
-`Authentication`  &nbsp;
-`Get movies info` &nbsp; <br> <br>
-`Save to watch list` &nbsp;
-`Stripe payment gateway` &nbsp;
+ 
+</details>
 
-</div>
+ 
+
+ 
 
