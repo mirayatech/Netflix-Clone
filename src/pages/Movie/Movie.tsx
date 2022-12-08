@@ -2,7 +2,7 @@ import { doc, setDoc } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { Link, useParams } from 'react-router-dom'
-import { Navbar } from '../../Components'
+import { Footer, Navbar } from '../../Components'
 import { useAuthContext } from '../../Context'
 import { firebaseDb, MovieType, MovieVideoType } from '../../library'
 import { theme } from '../../styles'
@@ -118,6 +118,8 @@ export function Movie() {
       ) : (
         <Error>Not Found</Error>
       )}
+
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
+export const Container = styled.div`
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+`
+
 export const MyListWrapper = styled.div`
   margin: auto;
   display: flex;

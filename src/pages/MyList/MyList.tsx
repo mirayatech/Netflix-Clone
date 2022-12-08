@@ -8,10 +8,10 @@ import {
 } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Navbar } from '../../Components'
+import { Footer, Navbar } from '../../Components'
 import { useAuthContext } from '../../Context'
 import { firebaseDb, MyListType, UserType } from '../../library'
-import { Movies, MyListWrapper, Poster, TitleWrapper } from './style'
+import { Container, Movies, MyListWrapper, Poster, TitleWrapper } from './style'
 
 export function MyList() {
   const [isUser, setIsUser] = useState<UserType | null>(null)
@@ -53,7 +53,7 @@ export function MyList() {
   }, [])
 
   return (
-    <>
+    <Container>
       <Navbar />
       <MyListWrapper>
         <TitleWrapper>
@@ -78,6 +78,7 @@ export function MyList() {
           ))}
         </Movies>
       </MyListWrapper>
-    </>
+      <Footer />
+    </Container>
   )
 }

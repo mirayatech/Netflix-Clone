@@ -1,4 +1,4 @@
-import { Banner, Navbar, NetflixOriginal, Row } from '../../Components'
+import { Banner, Footer, Navbar, NetflixOriginal, Row } from '../../Components'
 
 import {
   UPCOMING,
@@ -21,6 +21,7 @@ export function Browse() {
       <Row URL={HORROR} name={'Horror'} />
       <Row URL={COMEDY} name={'Comedy'} />
       <Row URL={TOP_RATED} name={'Top On Netflix'} />
+      <Footer />
     </div>
   )
 }
