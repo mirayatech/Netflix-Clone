@@ -12,6 +12,7 @@ A Netflix clone, built with React, TypeScript, Firebase and Styled-Components. <
 - Save to watch list
 
 
+
 ### Dependencies 🛠️
 
 * `Firebase`
